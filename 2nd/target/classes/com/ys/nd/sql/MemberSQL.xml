@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mSQL">
+
+	<sql id="cntID">
+		SELECT
+			count(*) cnt
+		FROM
+			member
+		WHERE
+			m_id = #{id}
+			AND ISSHOW = 'Y'
+	</sql>
+	
+	<select id="memCnt" resultType="int" parameterType="mVO">
+		<include refid="cntID" />
+		AND m_pw = #{pw}
+	</select>
+	<select id="idCnt" resultType="int" parameterType="String">
+		<include refid="cntID"/>
+		
+	</select>
+	
+</mapper>
