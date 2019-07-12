@@ -14,7 +14,7 @@ import com.ys.nd.vo.MemberVO;
 @Controller
 @RequestMapping("/member")
 public class Member {
-	
+	 
 	@Autowired
 	MemberDAO mDAO;
 	
