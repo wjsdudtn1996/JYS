@@ -42,6 +42,7 @@ public class Member {
 		}else {
 			 // cnt 가 1이 아닌경우 로그인 실패. 다시 redirect로 폼으로돌아가기
 			rv.setUrl("loginForm.nd");
+			
 		}
 		mv.setView(rv);
 		
