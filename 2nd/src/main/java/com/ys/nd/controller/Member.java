@@ -18,7 +18,6 @@ public class Member {
 	@Autowired
 	MemberDAO mDAO;
 	
-	
 	@RequestMapping("/loginForm.nd")
 	public ModelAndView login(ModelAndView mv) {
 		mv.setViewName("/member/login");
